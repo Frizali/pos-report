@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.36107.64
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pos-report", "pos-report\pos-report.csproj", "{C32750C8-62D7-4EEA-B536-2BF970199DB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pos-report.Tests", "pos-report.Tests\pos-report.Tests.csproj", "{E620A9EF-99DB-4328-8786-BBC60BCE9CBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C32750C8-62D7-4EEA-B536-2BF970199DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C32750C8-62D7-4EEA-B536-2BF970199DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C32750C8-62D7-4EEA-B536-2BF970199DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C32750C8-62D7-4EEA-B536-2BF970199DB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E620A9EF-99DB-4328-8786-BBC60BCE9CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E620A9EF-99DB-4328-8786-BBC60BCE9CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E620A9EF-99DB-4328-8786-BBC60BCE9CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E620A9EF-99DB-4328-8786-BBC60BCE9CBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D5F3008-0E37-42D5-82E2-0ACC13FF1D05}
+	EndGlobalSection
+EndGlobal

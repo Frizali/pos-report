@@ -1,0 +1,7 @@
+.vs/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.log
+**/bin/
+**/obj/
