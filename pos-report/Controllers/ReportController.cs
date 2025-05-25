@@ -23,6 +23,5 @@ namespace pos_report.Controllers
         {
             return await _service.GenerateReportPDF(param);
         }
-
     }
 }

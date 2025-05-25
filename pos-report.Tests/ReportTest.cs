@@ -16,10 +16,10 @@ namespace pos_report.Tests
             var reportService = new ReportService();
             var reportParam = new ReportParam()
             {
-                ID = "",
-                FromDate = "2025-05-01",
-                ToDate = "2025-05-31",
-                ReportName = "Sales Analytics"
+                ID = "45f8b720-92cc-47da-9e81-59e99fa9231e",
+                FromDate = "",
+                ToDate = "",
+                ReportName = "Order"
             };
 
             await reportService.ExportXmlAndSchema(reportParam);
@@ -31,10 +31,10 @@ namespace pos_report.Tests
             var reportService = new ReportService();
             var reportParam = new ReportParam()
             {
-                ID = "",
-                FromDate = "2025-05-01",
-                ToDate = "2025-05-31",
-                ReportName = "Sales Analytics"
+                ID = "45f8b720-92cc-47da-9e81-59e99fa9231e",
+                FromDate = "",
+                ToDate = "",
+                ReportName = "Order"
             };
 
             var stream = await reportService.GenerateReportPDF(reportParam);

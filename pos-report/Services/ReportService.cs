@@ -29,6 +29,13 @@ namespace pos_report.Services
                 string query = $"SELECT * FROM dbo.{tblReport.strFunction}('{param.ID}', '{param.FromDate}', '{param.ToDate}')";
                 var da = new SqlDataAdapter(query, con);
                 da.Fill(ds, "Data");
+
+                if (tblReport.strFunction1 != null)
+                {
+                    string query1 = $"SELECT * FROM dbo.{tblReport.strFunction1}('{param.ID}', '{param.FromDate}', '{param.ToDate}')";
+                    var da1 = new SqlDataAdapter(query1, con);
+                    da1.Fill(ds, "Data1");
+                }
             }
 
             MemoryStream output = new MemoryStream();
@@ -74,13 +81,20 @@ namespace pos_report.Services
                 SqlDataAdapter daHeader = new SqlDataAdapter(GetQueryHeader(param), con);
                 daHeader.Fill(ds, "Header");
 
-                string query = $"dbo.{tblReport.strFunction}('{param.ID}', '{param.FromDate}', '{param.ToDate}')";
+                string query = $"SELECT * FROM dbo.{tblReport.strFunction}('{param.ID}', '{param.FromDate}', '{param.ToDate}')";
                 SqlDataAdapter da = new SqlDataAdapter(query, con);
                 da.Fill(ds, "Data");
+
+                if (tblReport.strFunction1 != null)
+                {
+                    string query1 = $"SELECT * FROM dbo.{tblReport.strFunction1}('{param.ID}', '{param.FromDate}', '{param.ToDate}')";
+                    var da1 = new SqlDataAdapter(query1, con);
+                    da1.Fill(ds, "Data1");
+                }
             }
 
-            ds.WriteXml("D:\\pos-report\\SalesAnalytics.xml", XmlWriteMode.WriteSchema);
-            ds.WriteXmlSchema("D:\\pos-report\\SalesAnalytics.xsd");
+            ds.WriteXml($"D:\\pos-report\\{tblReport.rptFileName}.xml", XmlWriteMode.WriteSchema);
+            ds.WriteXmlSchema($"D:\\pos-report\\{tblReport.rptFileName}.xsd");
         }
 
         private string GetQueryHeader(ReportParam param)
