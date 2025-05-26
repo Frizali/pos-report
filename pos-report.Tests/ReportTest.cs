@@ -1,8 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using pos_report.Models;
 using pos_report.Services;
-using System;
-using System.IO;
 using System.Threading.Tasks;
 
 namespace pos_report.Tests
@@ -12,14 +10,14 @@ namespace pos_report.Tests
     {
         [TestMethod]
         public async Task Create_XMLReport_ShouldSaved()
-        {
+         {
             var reportService = new ReportService();
             var reportParam = new ReportParam()
             {
-                ID = "45f8b720-92cc-47da-9e81-59e99fa9231e",
-                FromDate = "",
-                ToDate = "",
-                ReportName = "Order"
+                ID = "",
+                FromDate = "2025-05-01",
+                ToDate = "2025-05-31",
+                ReportName = "Sales Analytics"
             };
 
             await reportService.ExportXmlAndSchema(reportParam);
@@ -31,13 +29,14 @@ namespace pos_report.Tests
             var reportService = new ReportService();
             var reportParam = new ReportParam()
             {
-                ID = "45f8b720-92cc-47da-9e81-59e99fa9231e",
-                FromDate = "",
-                ToDate = "",
-                ReportName = "Order"
+                ID = "",
+                FromDate = "2025-05-01",
+                ToDate = "2025-05-31",
+                ReportName = "Sales Analytics"
             };
 
             var stream = await reportService.GenerateReportPDF(reportParam);
+            Assert.IsNotNull(stream);
         }
     }
 }

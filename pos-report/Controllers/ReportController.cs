@@ -18,7 +18,7 @@ namespace pos_report.Controllers
         }
 
         [Route("report")]
-        [HttpGet]
+        [HttpPost]
         public async Task<object> Index(ReportParam param)
         {
             return await _service.GenerateReportPDF(param);

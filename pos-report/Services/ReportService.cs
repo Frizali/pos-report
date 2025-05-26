@@ -12,7 +12,7 @@ namespace pos_report.Services
 {
     public class ReportService : IReportService
     {
-        private readonly string _connectionString = "server=DESKTOP-OOK8DO9\\SQLEXPRESS;database=POS;Trusted_Connection=true;TrustServerCertificate=True;";
+        private readonly string _connectionString = "server=(localdb)\\MSSQLLocalDB;database=POS;Trusted_Connection=true;TrustServerCertificate=True;";
 
         public async Task<object> GenerateReportPDF(ReportParam param)
         {
