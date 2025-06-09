@@ -16,8 +16,8 @@ namespace pos_report.Tests
             {
                 ID = "",
                 FromDate = "2025-05-01",
-                ToDate = "2025-05-31",
-                ReportName = "Sales Analytics"
+                ToDate = "2025-06-30",
+                ReportName = "Order Detail"
             };
 
             await reportService.ExportXmlAndSchema(reportParam);
